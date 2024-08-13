@@ -14,12 +14,12 @@ white = (255, 255, 255)
 
 # Set up the screen
 screen = pygame.display.set_mode((1920, 1080))
-pygame.display.set_caption("Leaves Alpha 0.0.2.1")
+pygame.display.set_caption("Leaves Alpha 0.0.2.2")
 
 # Load and set the font
 font = pygame.font.Font("minecraft_font.ttf", 32)
 
-text = font.render("Leaves Alpha 0.0.2.1", False, black)
+text = font.render("Leaves Alpha 0.0.2.2", False, black)
 
 textRect = text.get_rect()
 
@@ -31,6 +31,10 @@ fps = pygame.time.Clock()
 
 circle_speed = 5
 second_circle_speed = 5
+
+icon = pygame.image.load("icon.jpg")
+
+pygame.display.set_icon(icon)
 
 running = True
 
@@ -87,6 +91,8 @@ while running:
     # Fill the screen with the background color
     screen.fill(background_colour)
 
+
+
     # Draw the circles at the new positions
     pygame.draw.circle(screen, circle_colour, (circle_center_x, circle_center_y), circle_radius)
     pygame.draw.circle(screen, second_circle_colour, (second_circle_center_x, second_circle_center_y),
@@ -104,4 +110,3 @@ while running:
 
 # Quit Pygame
 pygame.quit()
-
