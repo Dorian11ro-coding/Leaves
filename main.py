@@ -46,7 +46,7 @@ rect_center_x = 750
 rect_center_y = 800
 rect_height = 100
 rect_width = 100
-rect_speed = 10
+rect_speed = 5
 
 while running:
     for event in pygame.event.get():
