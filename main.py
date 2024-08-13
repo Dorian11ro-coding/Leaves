@@ -14,17 +14,17 @@ white = (255, 255, 255)
 
 # Set up the screen
 screen = pygame.display.set_mode((1920, 1080))
-pygame.display.set_caption("Leaves Alpha 0.0.2")
+pygame.display.set_caption("Leaves Alpha 0.0.2.1")
 
 # Load and set the font
 font = pygame.font.Font("minecraft_font.ttf", 32)
 
-text = font.render("Leaves Alpha 0.0.2", False, black)
+text = font.render("Leaves Alpha 0.0.2.1", False, black)
 
 textRect = text.get_rect()
 
 # Set the center of the rectangular object.
-textRect.center = (180, 20)
+textRect.center = (200, 20)
 
 # Set the clock for controlling the frame rate
 fps = pygame.time.Clock()
@@ -44,9 +44,9 @@ second_circle_radius = 30
 
 rect_center_x = 750
 rect_center_y = 800
-rect_height = 20
-rect_width = 30
-rect_speed = 5
+rect_height = 100
+rect_width = 100
+rect_speed = 10
 
 while running:
     for event in pygame.event.get():
@@ -76,6 +76,14 @@ while running:
     if keys[pygame.K_l]:
         second_circle_center_x += second_circle_speed
 
+    if keys[pygame.K_t]:
+        rect_center_y -= rect_speed
+    if keys[pygame.K_g]:
+        rect_center_y += rect_speed
+    if keys[pygame.K_h]:
+        rect_center_x += rect_speed
+    if keys[pygame.K_f]:
+        rect_center_x -= rect_speed
     # Fill the screen with the background color
     screen.fill(background_colour)
 
