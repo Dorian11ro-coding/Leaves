@@ -14,17 +14,17 @@ white = (255, 255, 255)
 
 # Set up the screen
 screen = pygame.display.set_mode((1920, 1080))
-pygame.display.set_caption("Leaves Alpha 0.0.2.2")
+pygame.display.set_caption("Leaves Beta 0.0.3")
 
 # Load and set the font
 font = pygame.font.Font("minecraft_font.ttf", 32)
 
-text = font.render("Leaves Alpha 0.0.2.2", False, black)
+text = font.render("Leaves Beta 0.0.3", False, black)
 
 textRect = text.get_rect()
 
 # Set the center of the rectangular object.
-textRect.center = (200, 20)
+textRect.center = (180, 20)
 
 # Set the clock for controlling the frame rate
 fps = pygame.time.Clock()
@@ -51,6 +51,16 @@ rect_center_y = 800
 rect_height = 100
 rect_width = 100
 rect_speed = 5
+
+button_surface_width = 200
+button_surface_height = 50
+button_x = 400
+button_y = 200
+button_color = (0, 0, 0)
+
+class AddBileButton:
+    def __init__(self, ):
+        self.color = (0, 0, 0) # does absolutely nothing because I haven't finished it
 
 while running:
     for event in pygame.event.get():
@@ -91,13 +101,11 @@ while running:
     # Fill the screen with the background color
     screen.fill(background_colour)
 
-
-
     # Draw the circles at the new positions
     pygame.draw.circle(screen, circle_colour, (circle_center_x, circle_center_y), circle_radius)
-    pygame.draw.circle(screen, second_circle_colour, (second_circle_center_x, second_circle_center_y),
-                       second_circle_radius)
+    pygame.draw.circle(screen, second_circle_colour, (second_circle_center_x, second_circle_center_y),second_circle_radius)
     pygame.draw.rect(screen, rect_colour, (rect_center_x, rect_center_y, rect_height, rect_width))
+    pygame.draw.rect(screen, button_color, (button_x, button_y, button_surface_width, button_surface_height))
 
     # Blit the text last to ensure it appears on top
     screen.blit(text, textRect)
