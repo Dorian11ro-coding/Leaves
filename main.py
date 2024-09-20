@@ -121,7 +121,7 @@ while running:
     pygame.draw.circle(screen, circle_colour, (circle_center_x, circle_center_y), circle_radius)
     pygame.draw.circle(screen, second_circle_colour, (second_circle_center_x, second_circle_center_y),second_circle_radius)
     pygame.draw.rect(screen, rect_colour, (rect_center_x, rect_center_y, rect_height, rect_width))
-    pygame.draw.rect(screen, button_color, (button_x, button_y, button_surface_width, button_surface_height))
+    # pygame.draw.rect(screen, button_color, (button_x, button_y, button_surface_width, button_surface_height))
 
     # Blit the text last to ensure it appears on top
     screen.blit(text, textRect)
