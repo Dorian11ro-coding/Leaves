@@ -13,7 +13,7 @@ black = (0, 0, 0)
 white = (255, 255, 255)
 
 # Set up the screen
-screen = pygame.display.set_mode((1400, 750))
+screen = pygame.display.set_mode((1920, 1080))
 pygame.display.set_caption("Leaves Beta 0.0.3")
 
 # Load and set the font
@@ -28,7 +28,7 @@ textRect2 = text.get_rect()
 
 # Set the center of the rectangular object.
 textRect.center = (320, 20)
-textRect2.center = (1300, 20)
+textRect2.center = (1850, 20)
 
 # Set the clock for controlling the frame rate
 fps = pygame.time.Clock()
@@ -66,16 +66,7 @@ text_height = 20
 text_width = 40
 text_x = 800
 text_y = 300 
-text_color = (0, 0, 0) 
-
-class button:
-    def __init__(self, color, width, height, x, y, text='Add circles'):
-        self.color = color
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
-        self.text = text
+text_color = (0, 0, 0)
     
         
 while running:
@@ -89,31 +80,43 @@ while running:
     # Update circle position based on WASD keys
     if keys[pygame.K_w]:  # Move up
         circle_center_y -= circle_speed
+        print("Key W has been pressed")
     if keys[pygame.K_s]:  # Move down
         circle_center_y += circle_speed
+        print("Key S has been pressed")
     if keys[pygame.K_a]:  # Move left
         circle_center_x -= circle_speed
+        print("Key A has been pressed")
     if keys[pygame.K_d]:  # Move right
         circle_center_x += circle_speed
+        print("Key D has been pressed")
 
     # Update second circle position based on arrow keys
     if keys[pygame.K_i]:
         second_circle_center_y -= second_circle_speed
+        print("Key I has been pressed")
     if keys[pygame.K_k]:
         second_circle_center_y += second_circle_speed
+        print("Key K has been pressed")
     if keys[pygame.K_j]:
         second_circle_center_x -= second_circle_speed
+        print("Key J has been pressed")
     if keys[pygame.K_l]:
         second_circle_center_x += second_circle_speed
+        print("Key L has been pressed")
 
     if keys[pygame.K_t]:
         rect_center_y -= rect_speed
+        print("Key T has been pressed")
     if keys[pygame.K_g]:
         rect_center_y += rect_speed
+        print("Key G has been pressed")
     if keys[pygame.K_h]:
         rect_center_x += rect_speed
+        print("Key H has been pressed")
     if keys[pygame.K_f]:
         rect_center_x -= rect_speed
+        print("Key F has been pressed")
     # Fill the screen with the background color
     screen.fill(background_colour)
 
